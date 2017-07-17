@@ -124,7 +124,7 @@ public class ArticleDAOImpl implements ArticleDAO{
 		//ArticleBean bean = new ArticleBean();
 		String rs ="0";
 		try {
-			String sql = "UPDATE BOARD SET TITLE= '"+bean.getTitle()+"', CONTENT='"+bean.getContent()+"' WHERE ARTICLE_SEQ='"+bean.getArticleSeq()+"'";
+			String sql = "UPDATE BOARD SET TITLE= '"+bean.getTitle()+"', CONTENT='"+bean.getContent()+"', REGDATE = SYSDATE WHERE ARTICLE_SEQ='"+bean.getArticleSeq()+"'";
 			rs=String.valueOf(DriverManager.getConnection(DB.URL, DB.USERID, DB.PASSWORD).createStatement().executeUpdate(sql));
 			System.out.println(rs);
 		} catch (Exception e) {
