@@ -30,5 +30,7 @@ CREATE TABLE Board(
 		ON DELETE CASCADE
 );
 
+SELECT * FROM MEMBER WHERE name='홍길동';
+
 Alter Table Board Modify(content VARCHAR2(100));
 

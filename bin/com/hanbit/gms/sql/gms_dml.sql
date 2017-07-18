@@ -1,9 +1,4 @@
 -- id, password, name, ssn regdate
-
-
-SELECT * FROM Member;
-SELECT * FROM Member WHERE name='홍길동';
-SELECT COUNT(*) AS count FROM Member;
 INSERT INTO Member(id, name, password, ssn, regdate)
 VALUES('hong', '홍길동', '1', '860305-1234567', SYSDATE);
 INSERT INTO Member(id, name, password, ssn, regdate)
@@ -26,6 +21,17 @@ INSERT INTO Member(id, name, password, ssn, regdate)
 VALUES('666', '장동건', '1', '461212-2234567', SYSDATE);
 INSERT INTO Member(id, name, password, ssn, regdate)
 VALUES('888', '김우열', '1', '701212-2234567', SYSDATE);
+
+SELECT * FROM Member;
+SELECT * FROM Member WHERE name='홍길동';
+SELECT COUNT(*) AS count FROM Member;
+
+UPDATE MEMBER
+SET password='2'
+WHERE id='hong';
+
+DELETE FROM MEMBER WHERE id 
+
 
 INSERT INTO Board(article_seq,id,title, content,hitcount,regdate)
 VALUES(article_seq.nextval,'hong','홍길동 안녕',
@@ -58,7 +64,11 @@ INSERT INTO Board(article_seq,id,title, content,hitcount,regdate)
 VALUES(article_seq.nextval,'333','임요환 안녕',
 '인도하겠다는 피는 이 이상',0,SYSDATE);
 
+SELECT* FROM MEMBER WHERE name ='홍길동';
 
+INSERT INTO MEMBER (ID, PASSWORD, SSN, REGDATE) VALUES (66,66,66,SYSDATE);
 
+INSERT INTO BOARD(ID,%s,%s,%s,%s,%s) VALUES(?, ?, ?,SYSDATE,article_seq,?);
 
+SELECT * FROM MEMBER;
 SELECT * FROM Board;

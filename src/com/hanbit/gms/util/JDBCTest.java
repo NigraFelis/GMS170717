@@ -13,8 +13,8 @@ public class JDBCTest {
 		String findName="";
 		Connection conn=null;
 		try {
-			Class.forName(DB.DRIVER);
-			conn=DriverManager.getConnection(DB.URL,DB.USERID,DB.PASSWORD);
+			Class.forName(DB.ORDRIVER);
+			conn=DriverManager.getConnection(DB.ORURL,DB.USERNAME,DB.PASSWORD);
 			Statement stmt=conn.createStatement();
 			String sql="SELECT * FROM Member WHERE id='hong'";
 			ResultSet rs = stmt.executeQuery(sql);
